@@ -14,11 +14,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
 Route::get('/', [UserController::class, 'login'])->name('login');
 Route::post('/auth', [UserController::class, 'auth'])->name('auth.user');
 

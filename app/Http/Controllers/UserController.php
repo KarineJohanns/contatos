@@ -15,11 +15,14 @@ class UserController extends Controller
         $this->validate($request, [
             'email'=> 'required',
             'password'=> 'required'
+        ],[
+            'email.required' => 'E-mail é obrigátorio.',
+            'password.required' => 'Senha é obrigátorio.'
         ]);
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             dd('Logou');
         } else {
-            dd('Não logou');
+           return redirect()->back()->with('danger', 'E-mail ou senha inválidos.');
         }
     }
 }
