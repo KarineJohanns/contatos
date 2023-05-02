@@ -12,6 +12,7 @@ class UserController extends Controller
     }
 
     public function auth(Request $request){
+
         $this->validate($request, [
             'email'=> 'required',
             'password'=> 'required'
@@ -19,10 +20,20 @@ class UserController extends Controller
             'email.required' => 'E-mail é obrigátorio.',
             'password.required' => 'Senha é obrigátorio.'
         ]);
+
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            dd('Logou');
+
+           return redirect('/home');
+
         } else {
+
            return redirect()->back()->with('danger', 'E-mail ou senha inválidos.');
+
         }
+    }
+
+    public function destroy(){
+        Auth::logout();
+        return redirect('/');
     }
 }
