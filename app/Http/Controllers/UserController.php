@@ -11,6 +11,10 @@ class UserController extends Controller
         return view('Login.index');
     }
 
+    public function registry(){
+        return view('Login.registry');
+    }
+
     public function auth(Request $request){
 
         $this->validate($request, [
