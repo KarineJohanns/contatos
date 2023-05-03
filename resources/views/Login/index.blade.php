@@ -41,5 +41,6 @@
             <input type="password" name="password">
             <button type="submit">Logar</button>
         </form>
+        <a href="{{route('registry')}}">Registre-se</a>
     </body>
 </html>
