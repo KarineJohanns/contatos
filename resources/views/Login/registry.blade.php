@@ -15,7 +15,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body class="antialiased">
-        <h1>Page login</h1>
+        <h1>Page Registry</h1>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -32,15 +32,19 @@
             </div>
         @endif
 
-        <form method="post" action="{{route('auth.user')}}">
+        <form method="post">
             @csrf
             <label for="">Email:</label>
             <input type="text" name="email">
 
             <label for="">Senha:</label>
             <input type="password" name="password">
-            <button type="submit">Logar</button>
+
+            <label for="">Confirmação da senha:</label>
+            <input type="password" name="confirm-password">
+
+            <button type="submit">Registrar</button>
         </form>
-        <a href="{{route('registry')}}">Registre-se</a>
+        <a href="{{route('login')}}">Logar</a>
     </body>
 </html>

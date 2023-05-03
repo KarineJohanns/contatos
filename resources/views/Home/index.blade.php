@@ -15,32 +15,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body class="antialiased">
-        <h1>Page login</h1>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
-        @if(session('danger'))
-            <div class="alert alert-danger">
-                {{session('danger')}}
-            </div>
-        @endif
-
-        <form method="post" action="{{route('auth.user')}}">
-            @csrf
-            <label for="">Email:</label>
-            <input type="text" name="email">
-
-            <label for="">Senha:</label>
-            <input type="password" name="password">
-            <button type="submit">Logar</button>
-        </form>
-        <a href="{{route('registry')}}">Registre-se</a>
+      <h1>Home Page</h1>
+      <a href="{{route('auth.destroy')}}">Logout</a>
     </body>
 </html>
