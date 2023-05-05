@@ -1,0 +1,127 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container-cadastro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.cadastro-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem;
+	border: solid 1px #e4e4e4;
+	border-radius: 5px;
+}
+.form-cadastro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title-text {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 140%;
+	color: #413c3c;
+}
+
+.description {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	color: #7e7a7a;
+}
+
+.form-cadastro {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.form-cadastro label {
+	color: #413c3c;
+	font-size: 12px;
+	font-family: roboto;
+}
+.form-cadastro input {
+	width: 100%;
+	border: 1px solid #e4e4e4;
+	border-radius: 5px;
+	padding: 0.5rem;
+	min-width: 378px;
+	margin: 0.5rem 0;
+}
+.form-cadastro input::placeholder {
+	color: #bbbbbb;
+}
+
+.form-cadastro .btn-control{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.form-cadastro button{
+	padding: 0.5rem;
+	gap: 8px;
+	width: 100%;
+	margin: 1rem 0 2rem 0;
+	border-radius: 4px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+}
+.form-cadastro button[type="submit"] {
+	background: #2f80ed;
+	border: 1px solid #2f80ed;
+	color: #ffffff;
+}
+.form-cadastro button[type="button"] {
+	background: #ffffff;
+	border: none;
+}
+.form-cadastro a {
+    text-decoration: none;
+    color: #413C3C;
+}
+
+.signin {
+	margin-top: 2rem;
+}
+
+.text {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	color: #413c3c;
+}
+.signin-text {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	color: #413c3c;
+	text-decoration: none;
+}

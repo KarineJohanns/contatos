@@ -14,6 +14,7 @@
 <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 <link href="{{ asset('css/pesquisa.css') }}" rel="stylesheet">
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+<link href="{{ asset('css/cadastro.css') }}" rel="stylesheet">
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
