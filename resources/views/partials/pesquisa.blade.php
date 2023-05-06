@@ -11,10 +11,10 @@
      <form>
          <div class="search-container">
              <div class="search-box flex-grow-1">
+                 <input type="text" placeholder="Pesquise por nome, cpf, telefone ou endereço">
                  <button type="submit"><i class="fa fa-search"></i></button>
-                 <input type="text" placeholder="Pesquisar...">
              </div>
-             <button type="button" class="add-contact-btn"><i class="fa-solid fa-plus"></i> Adicionar contato</button>
+             <button type="button" class="add-contact-btn"><i class="fa-solid fa-plus"></i> Novo contato</button>
          </div>
      </form>
 

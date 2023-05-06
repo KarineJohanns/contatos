@@ -8,7 +8,7 @@
 
         @include('partials.header')
     </head>
-    <body class="antialiased">
+    <body class="antialiased" id="body-cadastro">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>

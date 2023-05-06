@@ -11,7 +11,7 @@
 
     </head>
 
-    <body class="antialiased">
+    <body class="antialiased " id="body-login">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
