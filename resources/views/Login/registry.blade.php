@@ -32,16 +32,19 @@
             </div>
         @endif
 
-        <form method="post">
+        <form method="post" action="{{route('create.user')}}">
             @csrf
-            <label for="">Email:</label>
-            <input type="text" name="email">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" value="{{ old('name') }}" required autofocus>
 
-            <label for="">Senha:</label>
-            <input type="password" name="password">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" required>
 
-            <label for="">Confirmação da senha:</label>
-            <input type="password" name="confirm-password">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password_confirmation">Confirme a senha:</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" required>
 
             <button type="submit">Registrar</button>
         </form>
