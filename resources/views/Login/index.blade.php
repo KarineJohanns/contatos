@@ -12,7 +12,7 @@
     </head>
 
     <body class="antialiased " id="body-login">
-        @if ($errors->any())
+        <!-- @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -26,7 +26,7 @@
         <div class="alert alert-danger">
             {{session('danger')}}
         </div>
-        @endif
+        @endif -->
 
         <div class="container-login">
             <section class="login-container">
@@ -34,6 +34,21 @@
                     <h4 class="title-text">Lista de Contatos</h4>
                     <p class="description">Faça login para acessar</p>
                 </article>
+                @if ($errors->any())
+                <div class="alert alert-danger erro">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                @if(session('danger'))
+                <div class="alert alert-danger erro">
+                    {{session('danger')}}
+                </div>
+                @endif
                 <form method="post" action="{{route('auth.user')}}" class="form-login">
                     @csrf
                     <label for="">Email*</label>

@@ -70,6 +70,10 @@
 	min-width: 378px;
 	margin: 0.5rem 0;
 }
+.form-cadastro input:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px rgba(47, 128, 237, 0.5);
+}
 .form-cadastro input::placeholder {
 	color: #bbbbbb;
 }

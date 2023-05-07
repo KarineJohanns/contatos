@@ -6,3 +6,4 @@
 
     <!-- JS -->
     <script src="{{ asset('js/login.js') }}"></script>
+    <script src="{{ asset('js/new-contact.js') }}"></script>

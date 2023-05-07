@@ -9,7 +9,13 @@
         @include('partials.header')
     </head>
     <body class="antialiased">
+    
       @include('partials.navbar')
       @include('partials.pesquisa')
+      @include('partials.new-contact')
+
+      <div class="overlay hidden" id="overlay"></div>
+      @include('partials.scripts')
+      
     </body>
 </html>
