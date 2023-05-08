@@ -1,0 +1,132 @@
+.edit-contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 672px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    right: -672px;
+    padding: 1rem;
+    z-index: 100;
+    transition: all 0.4s ease;
+    
+}
+.active {
+    right: 0;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.hidden {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-contact-title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #bbbbbb;
+}
+.edit-contact-container label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #413c3c;
+    margin: 5px 0 5px 0;
+}
+
+.edit-contact-container input {
+    padding: 8px;
+    gap: 8px;
+    width: 100%;
+    height: 38px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+}
+.edit-contact-container textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+.edit-contact-container textarea::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #bbbbbb;
+}
+
+.edit-contact-container input::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #bbbbbb;
+}
+.button-row {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+#cancelarEdit {
+    background: #ffffff;
+    color: #413c3c;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    width: 128px;
+    height: 40px;
+    padding: 8px;
+    gap: 8px;
+    margin-right: .5rem;
+}
+#cancelarEdit:hover{
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+#salvar {
+    padding: 8px;
+    gap: 8px;
+    width: 128px;
+    height: 40px;
+    background: #2f80ed;
+    border: 1px solid #2f80ed;
+    color: #ffffff;
+    border-radius: 4px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    margin-left: .5rem;
+}

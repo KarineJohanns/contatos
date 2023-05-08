@@ -1,0 +1,16 @@
+nav {
+    background-color: #ffffff;
+    overflow: hidden;
+    border-bottom: solid 1px #dadada;
+    padding: 2rem;
+}
+
+nav .title-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #413c3c;
+	text-decoration: none;
+}
