@@ -19,6 +19,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [UserController::class, 'login'])->name('login');
 Route::get('/registro', [UserController::class, 'registry'])->name('registry');
 Route::post('/auth', [UserController::class, 'auth'])->name('auth.user');
+Route::post('/create', [UserController::class, 'create'])->name('create');
+
 
 
 Route::middleware(['auth'])->group(function(){
