@@ -13,8 +13,11 @@
       @include('partials.navbar')
       @include('partials.pesquisa')
       @include('partials.new-contact')
+      @include('partials.edit')
+      @include('partials.list')
 
-      <div class="overlay hidden" id="overlay"></div>
+      <div class="overlay hidden overlayEdit" id="overlay"></div>
+      <div class="overlay hidden" id="overlayEdit"></div>
       @include('partials.scripts')
       
     </body>

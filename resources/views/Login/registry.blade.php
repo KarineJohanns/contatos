@@ -34,13 +34,13 @@
                 <form action="" class="form-cadastro">
                     @csrf
                     <label for="">Nome*</label>
-                    <input type="text" name="name" placeholder="Nome">
+                    <input type="text" name="name" placeholder="Nome" required>
                     <label for="">Email*</label>
-                    <input type="text" name="email" placeholder="Seuemail@mail.com">
+                    <input type="text" name="email" placeholder="Seuemail@mail.com" required>
                     <label for="">Senha*</label>
-                    <input type="password" name="password" placeholder="Senha">
+                    <input type="password" name="password" placeholder="Senha" required>
                     <label for="">Confirmar senha*</label>
-                    <input type="password" name="confirm-password" placeholder="Confirmar senha">
+                    <input type="password" name="confirm-password" placeholder="Confirmar senha" required>
                     <div class="btn-control">
                         <button type="button"><a href="{{route('login')}}">Voltar</a></button>
                         <button type="submit">Cadastrar</button>
