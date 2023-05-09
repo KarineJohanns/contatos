@@ -21,4 +21,10 @@ class Contact extends Model
         'city',
         'note'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
