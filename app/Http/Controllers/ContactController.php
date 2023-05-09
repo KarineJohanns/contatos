@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     public function index(){
-        return view('Home.index');
+        $user = auth()->user();
+        $contacts = $user->contacts()->get();
+
+        return view('Home.index', compact('contacts'));
     }
 }
