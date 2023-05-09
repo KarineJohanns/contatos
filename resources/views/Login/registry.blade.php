@@ -31,16 +31,16 @@
                     {{session('danger')}}
                 </div>
                 @endif
-                <form action="" class="form-cadastro">
+                <form method="post" action="{{route('create.user')}}" class="form-cadastro">
                     @csrf
                     <label for="">Nome*</label>
-                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="text" name="name" placeholder="Nome">
                     <label for="">Email*</label>
-                    <input type="text" name="email" placeholder="Seuemail@mail.com" required>
+                    <input type="text" name="email" placeholder="Seuemail@mail.com">
                     <label for="">Senha*</label>
-                    <input type="password" name="password" placeholder="Senha" required>
+                    <input type="password" name="password" placeholder="Senha">
                     <label for="">Confirmar senha*</label>
-                    <input type="password" name="confirm-password" placeholder="Confirmar senha" required>
+                    <input type="password" name="confirm-password" placeholder="Confirmar senha">
                     <div class="btn-control">
                         <button type="button"><a href="{{route('login')}}">Voltar</a></button>
                         <button type="submit">Cadastrar</button>

@@ -45,6 +45,12 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
+            'confirm-password' => 'required'
+        ],[
+            'name.required' => 'Nome não pode ficar em branco.',
+            'email.required' => 'E-mail não pode ficar em branco.',
+            'password.required' => 'Senha não pode ficar em branco.',
+            'confirm-password.required' => 'Confirmação de senha não pode ficar em branco.'
         ]);
 
         $user = User::create([
