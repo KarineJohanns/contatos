@@ -1,5 +1,5 @@
 <!-- Lista de contatos -->
-<div class="container container-formulario">
+<div class="container-formulario">
     <table class="table align-middle mb-0">
         <thead class="head-table">
             <tr>
