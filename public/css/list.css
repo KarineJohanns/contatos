@@ -1,3 +1,7 @@
+.container-formulario {
+    width: 80% !important;
+}
+
 .head-table {
     background-color: #f8f8f8;
     border: none !important;
@@ -8,4 +12,8 @@
 .container-formulario {
     width: 80% !important;
     float: right;
+}
+
+button:hover {
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
 }

@@ -37,7 +37,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="cep">CEP</label>
-                    <input value="Teste" type="text" id="cep" name="cep" placeholder="00000-000" required>
+                    <input value="Teste" type="text" id="cep" name="cep" placeholder="00000-000" required onblur="pesquisacep(this.value);">
                 </div>
             </div>
             <div class="col-md-6">
@@ -70,7 +70,7 @@
             </div>
             <div class="button-row">
                 <div class="form-button">
-                    <button type="reset" id="cancelarEdit">Cancelar</button>
+                    <button type="button" id="cancelarEdit">Cancelar</button>
                     <button type="submit" id="salvar">Salvar</button>
                 </div>
             </div>
