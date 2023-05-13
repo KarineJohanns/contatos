@@ -12,22 +12,6 @@
     </head>
 
     <body class="antialiased " id="body-login">
-        <!-- @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-
-        @if(session('danger'))
-        <div class="alert alert-danger">
-            {{session('danger')}}
-        </div>
-        @endif -->
-
         <div class="container-login">
             <section class="login-container">
                 <article class="title">
