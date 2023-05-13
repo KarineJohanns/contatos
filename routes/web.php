@@ -25,7 +25,9 @@ Route::post('/create', [UserController::class, 'create'])->name('create.user');
 
 Route::middleware(['auth'])->group(function(){
 
-  Route::get('/home', [ContactController::class, 'index'])->name('home');
+  Route::get('/contato', [ContactController::class, 'index'])->name('contact');
+
+  Route::post('/create_contact', [ContactController::class, 'createContact'])->name('create.contact');
 
   Route::get('/logout', [UserController::class, 'destroy'])->name('auth.destroy');
 
