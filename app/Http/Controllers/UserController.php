@@ -30,7 +30,7 @@ class UserController extends Controller
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
 
-           return redirect('/home');
+           return redirect('/contato');
 
         } else {
 
@@ -59,7 +59,7 @@ class UserController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return redirect('/home');
+        return redirect('/contato');
     }
 
 
