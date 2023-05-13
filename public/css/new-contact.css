@@ -5,10 +5,10 @@
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 50%;
+    width: 672px;
     height: 100%;
     top: 0px;
-    right: -672px;
+    right: -1024px;
     padding: 1rem;
     z-index: 100;
     transition: all 0.4s ease;
@@ -129,4 +129,7 @@
     font-size: 16px;
     line-height: 140%;
     margin-left: .5rem;
+}
+#salvar:hover{
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
 }
