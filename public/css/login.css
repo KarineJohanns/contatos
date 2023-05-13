@@ -106,6 +106,9 @@
 	font-size: 16px;
 	color: #ffffff;
 }
+.form-login button[type="submit"]:hover {
+	box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
+}
 
 .signin {
 	margin-top: 2rem;
