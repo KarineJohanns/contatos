@@ -14,7 +14,7 @@
                  <input type="text" placeholder="Pesquise por nome, cpf, telefone ou endereço">
                  <button type="submit"><i class="fa fa-search"></i></button>
              </div>
-             <button type="button" class="add-contact-btn" id="btn-add"><i class="fa-solid fa-plus"></i> Novo contato</button>
+             <a href="{{route('new.contact')}}" class="add-contact-btn" id=""><i class="fa-solid fa-plus"></i> Novo contato</a>
          </div>
      </form>
 
