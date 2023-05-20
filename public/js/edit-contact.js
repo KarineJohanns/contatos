@@ -7,6 +7,7 @@ const editContact = () => {
     edit.classList.toggle("active");
     overlayEdit.classList.toggle("hidden");
 };
+
 function caputatID(button) {
     var contactElement = button.closest("tr");
     var contactId = contactElement.getAttribute("id");

@@ -9,14 +9,16 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $user = auth()->user();
         $contacts = $user->contacts()->get();
 
         return view('Contact.index', compact('contacts'));
     }
 
-    public function createContact(Request $request){
+    public function createContact(Request $request)
+    {
 
         if (!Auth::check()) {
             return redirect()->route('login');
