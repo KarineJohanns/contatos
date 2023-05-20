@@ -29,8 +29,8 @@
                     <p class="text-muted mb-0">{{ $contact->phone_number }}</p>
                 </td>
                 <td colspan="2">
-                    <button type="button" class="btn" id="btn-edit"><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
-                    </button>
+                    <a href="{{route('edit.contact')}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
+                    </a>
                     <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato">
                     </button>
                 </td>
