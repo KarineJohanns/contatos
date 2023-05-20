@@ -27,6 +27,9 @@ Route::middleware(['auth'])->group(function(){
 
   Route::get('/contato', [ContactController::class, 'index'])->name('contact');
 
+  Route::get('/contato/novo', [ContactController::class, 'new'])->name('new.contact');
+  Route::get('/contato/editar', [ContactController::class, 'edit'])->name('edit.contact');
+
   Route::post('/create_contact', [ContactController::class, 'createContact'])->name('create.contact');
 
   Route::get('/logout', [UserController::class, 'destroy'])->name('auth.destroy');
