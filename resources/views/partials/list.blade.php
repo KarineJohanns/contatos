@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             @foreach($contacts as $contact)
-            <tr class="">
+            <tr class="" id="{{ json_encode($contact->id) }}">
                 <td>
                     <div class="d-flex align-items-center">
                         <div class="ms-2">
@@ -29,13 +29,13 @@
                     <p class="text-muted mb-0">{{ $contact->phone_number }}</p>
                 </td>
                 <td colspan="2">
-                    <button type="button" class="btn" id="btn-edit"><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
+                    <button type="button" class="btn btn-edit" id="btn-edit" onclick="capturarID(this)"><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
                     </button>
                     <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato">
                     </button>
                 </td>
             </tr>
-             @endforeach
+            @endforeach
         </tbody>
     </table>
 </div>
