@@ -30,11 +30,13 @@
                     <p class="text-muted mb-0">{{ $contact->phone_number }}</p>
                 </td>
                 <td colspan="2">
-                    <a href="{{asset ('resources/Contact/edit-contact')}}?contactId={{$contact->id}}">
+                    <a href="{{route('edit.contact')}}">
                         <button type="button" class="btn btn-edit" id="btn-edit" onclick="capturarID(this)"><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
-                        </button></a>
-                    <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato">
-                    </button>
+                        </button>
+                    </a>
+                    <a>
+                        <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato"></button>
+                    </a>
                 </td>
             </tr>
             @endforeach

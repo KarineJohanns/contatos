@@ -17,6 +17,17 @@ class ContactController extends Controller
         return view('Contact.index', compact('contacts'));
     }
 
+    public function new()
+    {
+
+        return view('Contact.new');
+    }
+
+    public function edit()
+    {
+        return view('Contact.edit');
+    }
+
     public function createContact(Request $request)
     {
 
