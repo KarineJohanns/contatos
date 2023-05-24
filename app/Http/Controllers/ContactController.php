@@ -27,7 +27,6 @@ class ContactController extends Controller
     }
 
     public function createContact(Request $request){
-
         if (!Auth::check()) {
             return redirect()->route('login');
         }
@@ -39,9 +38,9 @@ class ContactController extends Controller
 
         if ($validator->fails()) {
             return redirect()
-                ->back()
-                ->withErrors($validator)
-                ->withInput();
+            ->back()
+            ->withErrors($validator)
+            ->withInput();
         }
 
         $contact = new Contact;

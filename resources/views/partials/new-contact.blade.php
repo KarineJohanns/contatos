@@ -1,4 +1,4 @@
-<!-- Adicionar contato -->
+<!-- Adicionar contato
 <section class="new-contact-container">
     <article>
         <h5 class="new-contact-title">Novo contato</h5>
@@ -86,4 +86,4 @@
             </div>
         </form>
     </article>
-</section>
+</section> -->

@@ -70,47 +70,47 @@ function pesquisacep(valor) {
 var forms = document.querySelectorAll(".myForm");
 
 forms.forEach(function (form) {
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    // form.addEventListener("submit", function (event) {
+    //     event.preventDefault(); // Impede o envio padrão do formulário
 
-        var nameInputs = form.getElementsByClassName("nome");
-        var phoneNumberInputs = form.getElementsByClassName("celular");
-        console.log("clicou");
+    //     var nameInputs = form.getElementsByClassName("nome");
+    //     var phoneNumberInputs = form.getElementsByClassName("celular");
+    //     console.log("clicou");
 
-        for (var i = 0; i < nameInputs.length; i++) {
-            var nameInput = nameInputs[i];
-            var phoneNumberInput = phoneNumberInputs[i];
+    //     for (var i = 0; i < nameInputs.length; i++) {
+    //         var nameInput = nameInputs[i];
+    //         var phoneNumberInput = phoneNumberInputs[i];
 
-            if (
-                nameInput.value.trim() === "" ||
-                phoneNumberInput.value.trim() === ""
-            ) {
-                // Adiciona a classe CSS para definir a borda vermelha
-                if (nameInput.value.trim() === "") {
-                    nameInput.classList.add("border-danger");
-                }
+    //         if (
+    //             nameInput.value.trim() === "" ||
+    //             phoneNumberInput.value.trim() === ""
+    //         ) {
+    //             // Adiciona a classe CSS para definir a borda vermelha
+    //             if (nameInput.value.trim() === "") {
+    //                 nameInput.classList.add("border-danger");
+    //             }
 
-                if (phoneNumberInput.value.trim() === "") {
-                    phoneNumberInput.classList.add("border-danger");
-                }
+    //             if (phoneNumberInput.value.trim() === "") {
+    //                 phoneNumberInput.classList.add("border-danger");
+    //             }
 
-                // Cria ou atualiza os elementos <span> para mostrar a mensagem de campo obrigatório
-                if (nameInput.value.trim() === "") {
-                    criarOuAtualizarMensagemCampoObrigatorio(
-                        nameInput,
-                        "Campo obrigatório"
-                    );
-                }
+    //             // Cria ou atualiza os elementos <span> para mostrar a mensagem de campo obrigatório
+    //             if (nameInput.value.trim() === "") {
+    //                 criarOuAtualizarMensagemCampoObrigatorio(
+    //                     nameInput,
+    //                     "Campo obrigatório"
+    //                 );
+    //             }
 
-                if (phoneNumberInput.value.trim() === "") {
-                    criarOuAtualizarMensagemCampoObrigatorio(
-                        phoneNumberInput,
-                        "Campo obrigatório"
-                    );
-                }
-            }
-        }
-    });
+    //             if (phoneNumberInput.value.trim() === "") {
+    //                 criarOuAtualizarMensagemCampoObrigatorio(
+    //                     phoneNumberInput,
+    //                     "Campo obrigatório"
+    //                 );
+    //             }
+    //         }
+    //     }
+    // });
 });
 
 var nameInputs = document.getElementsByClassName("nome");
