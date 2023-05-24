@@ -1,7 +1,7 @@
  <!-- menu lateral -->
  <div id="menu" class="container">
      <ul>
-         <li><a href="#"><img src="{{ asset('img/contato-caderno.svg')}}">Contatos</a></li>
+         <li><a href="/contato"><img src="{{ asset('img/contato-caderno.svg')}}">Contatos</a></li>
          <!-- <li><a href="#"><img src="{{ asset('img/agenda.svg')}}">Agenda</a></li> -->
      </ul>
  </div>

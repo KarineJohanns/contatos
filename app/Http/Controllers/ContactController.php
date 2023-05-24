@@ -9,7 +9,8 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $user = auth()->user();
         $contacts = $user->contacts()->get();
 

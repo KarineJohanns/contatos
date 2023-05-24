@@ -11,7 +11,8 @@
         </thead>
         <tbody>
             @foreach($contacts as $contact)
-            <tr class="">
+            <tr class="" id="{{ json_encode($contact->id) }}">
+                <div class="idContato" style="visibility: hidden;">{{ $contact->id}}</div>
                 <td>
                     <div class="d-flex align-items-center">
                         <div class="ms-2">
@@ -35,7 +36,7 @@
                     </button>
                 </td>
             </tr>
-             @endforeach
+            @endforeach
         </tbody>
     </table>
 </div>
