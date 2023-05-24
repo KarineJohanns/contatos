@@ -14,7 +14,6 @@
 
         @include('partials.navbar')
         @include('partials.pesquisa')
-        @include('partials.new-contact')
         @include('partials.list')
 
         <div class="overlay hidden overlayEdit" id="overlay"></div>

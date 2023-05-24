@@ -27,7 +27,7 @@
                 </td>
                 <td>
                     <p class="fw-normal mb-1">{{ $contact->phone }}</p>
-                    <p class="text-muted mb-0">{{ $contact['phone-number'] != null ? $contact['phone-number'] : ''  }}</p>
+                    <p class="text-muted mb-0">{{ $contact['phone-number'] }}</p>
                 </td>
                 <td colspan="2">
                     <a href="{{route('edit.contact',['id' => $contact->id])}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
