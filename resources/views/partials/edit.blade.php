@@ -1,4 +1,4 @@
-<!-- Editar contato -->
+<!-- Editar contato
 @foreach($contacts as $contact)
 <section class="edit-contact-container">
     <article>
@@ -80,4 +80,4 @@
         </form>
     </article>
 </section>
-@endforeach
+@endforeach -->

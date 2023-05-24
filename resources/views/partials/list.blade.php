@@ -30,7 +30,7 @@
                     <p class="text-muted mb-0">{{ $contact['phone-number'] != null ? $contact['phone-number'] : ''  }}</p>
                 </td>
                 <td colspan="2">
-                    <a href="{{route('edit.contact')}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
+                    <a href="{{route('edit.contact',['id' => $contact->id])}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
                     </a>
                     <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato">
                     </button>
