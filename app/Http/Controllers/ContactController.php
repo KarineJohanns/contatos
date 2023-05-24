@@ -17,19 +17,16 @@ class ContactController extends Controller
         return view('Contact.index', compact('contacts'));
     }
 
-    public function new()
-    {
+    public function new(){
 
         return view('Contact.new');
     }
 
-    public function edit()
-    {
+    public function edit(){
         return view('Contact.edit');
     }
 
-    public function createContact(Request $request)
-    {
+    public function createContact(Request $request){
 
         if (!Auth::check()) {
             return redirect()->route('login');
