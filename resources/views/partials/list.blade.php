@@ -11,7 +11,8 @@
         </thead>
         <tbody>
             @foreach($contacts as $contact)
-            <tr class="">
+            <tr class="" id="{{ json_encode($contact->id) }}">
+                <div class="idContato" style="visibility: hidden;">{{ $contact->id}}</div>
                 <td>
                     <div class="d-flex align-items-center">
                         <div class="ms-2">
@@ -26,16 +27,16 @@
                 </td>
                 <td>
                     <p class="fw-normal mb-1">{{ $contact->phone }}</p>
-                    <p class="text-muted mb-0">{{ $contact->phone_number }}</p>
+                    <p class="text-muted mb-0">{{ $contact['phone-number'] }}</p>
                 </td>
                 <td colspan="2">
-                    <a href="{{route('edit.contact')}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
+                    <a href="{{route('edit.contact',['id' => $contact->id])}}" class="btn" id=""><img src="{{asset ('img/edit.svg')}}" alt="Editar contato">
                     </a>
                     <button type="button" class="btn" id="btn-delete"><img src="{{asset ('img/delete.svg')}}" alt="Apagar contato">
                     </button>
                 </td>
             </tr>
-             @endforeach
+            @endforeach
         </tbody>
     </table>
 </div>

@@ -1,7 +1,9 @@
 <!-- Navbar -->
 <nav class="d-flex justify-content-between">
-	<h6 class="title-text" href="#">Lista de contatos</h6>
+	<a href="/contato">
+		<h6 class="title-text">Lista de contatos</h6>
+	</a>
 	<div class="logout">
-		<a href="{{route('auth.destroy')}}"><img src="./img/logout 1.svg" alt="Logout"></a>
+		<a href="{{route('auth.destroy')}}"><img src="{{ asset('img/logout.svg')}}" alt="Logout"></a>
 	</div>
 </nav>

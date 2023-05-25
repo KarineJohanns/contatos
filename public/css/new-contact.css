@@ -12,19 +12,17 @@
     padding: 1rem;
     z-index: 100;
     transition: all 0.4s ease;
-    
 }
 .active {
     right: 0;
 }
-.overlay{
+.overlay {
     width: 100vw;
     height: 100vh;
-    top:0;
+    top: 0;
     left: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
-    
 }
 .hidden {
     display: none;
@@ -91,7 +89,7 @@
 }
 .button-row {
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
 }
 
 #cancelar {
@@ -108,9 +106,9 @@
     height: 40px;
     padding: 8px;
     gap: 8px;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 }
-#cancelar:hover{
+#cancelar:hover {
     box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -128,10 +126,10 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 }
 
-#salvar:hover{
+#salvar:hover {
     box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -139,11 +137,17 @@ button:hover {
     box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
     border-color: #4d90fe;
     box-shadow: 0 0 0 1px #4d90fe;
-  }
-#salvar:hover{
+}
+#salvar:hover {
     box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mensagem-campo-obrigatorio {
+    color: red;
+    font-size: 12px;
 }
