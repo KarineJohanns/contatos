@@ -67,104 +67,117 @@ function pesquisacep(valor) {
 
 // validações
 
-var forms = document.querySelectorAll(".myForm");
+// var forms = document.querySelectorAll(".myForm");
 
-forms.forEach(function (form) {
-    // form.addEventListener("submit", function (event) {
-    //     event.preventDefault(); // Impede o envio padrão do formulário
+// forms.forEach(function (form) {
+//     form.addEventListener("submit", function (event) {
+//         const invalidInputs = form.querySelectorAll(":invalid");
 
-    //     var nameInputs = form.getElementsByClassName("nome");
-    //     var phoneNumberInputs = form.getElementsByClassName("celular");
-    //     console.log("clicou");
+//         invalidInputs.forEach((input) => {
+//             input.classList.add("error");
+//             input.addEventListener("input", () => {
+//                 input.setCustomValidity("Campo obrigatório");
+//                 input.classList.remove("error");
+//             });
+//         });
 
-    //     for (var i = 0; i < nameInputs.length; i++) {
-    //         var nameInput = nameInputs[i];
-    //         var phoneNumberInput = phoneNumberInputs[i];
+//         if (!form.checkValidity()) {
+//             event.preventDefault();
+//         }
+// event.preventDefault(); // Impede o envio padrão do formulário
 
-    //         if (
-    //             nameInput.value.trim() === "" ||
-    //             phoneNumberInput.value.trim() === ""
-    //         ) {
-    //             // Adiciona a classe CSS para definir a borda vermelha
-    //             if (nameInput.value.trim() === "") {
-    //                 nameInput.classList.add("border-danger");
-    //             }
+// var nameInputs = form.getElementsByClassName("nome");
+// var phoneNumberInputs = form.getElementsByClassName("celular");
+// console.log("clicou");
 
-    //             if (phoneNumberInput.value.trim() === "") {
-    //                 phoneNumberInput.classList.add("border-danger");
-    //             }
+// for (var i = 0; i < nameInputs.length; i++) {
+//     var nameInput = nameInputs[i];
+//     var phoneNumberInput = phoneNumberInputs[i];
 
-    //             // Cria ou atualiza os elementos <span> para mostrar a mensagem de campo obrigatório
-    //             if (nameInput.value.trim() === "") {
-    //                 criarOuAtualizarMensagemCampoObrigatorio(
-    //                     nameInput,
-    //                     "Campo obrigatório"
-    //                 );
-    //             }
+//     if (
+//         nameInput.value.trim() === "" ||
+//         phoneNumberInput.value.trim() === ""
+//     ) {
+//         // Adiciona a classe CSS para definir a borda vermelha
+//         if (nameInput.value.trim() === "") {
+//             nameInput.classList.add("border-danger");
+//         }
 
-    //             if (phoneNumberInput.value.trim() === "") {
-    //                 criarOuAtualizarMensagemCampoObrigatorio(
-    //                     phoneNumberInput,
-    //                     "Campo obrigatório"
-    //                 );
-    //             }
-    //         }
-    //     }
-    // });
-});
+//         if (phoneNumberInput.value.trim() === "") {
+//             phoneNumberInput.classList.add("border-danger");
+//         }
 
-var nameInputs = document.getElementsByClassName("nome");
+//         // Cria ou atualiza os elementos <span> para mostrar a mensagem de campo obrigatório
+//         if (nameInput.value.trim() === "") {
+//             criarOuAtualizarMensagemCampoObrigatorio(
+//                 nameInput,
+//                 "Campo obrigatório"
+//             );
+//         }
 
-for (var i = 0; i < nameInputs.length; i++) {
-    nameInputs[i].addEventListener("input", function () {
-        var nameInput = this;
+//         if (phoneNumberInput.value.trim() === "") {
+//             criarOuAtualizarMensagemCampoObrigatorio(
+//                 phoneNumberInput,
+//                 "Campo obrigatório"
+//             );
+//         }
+//     }
+// }
+//     });
+// });
 
-        // Remove a classe CSS para remover a borda vermelha
-        if (nameInput.value.trim() !== "") {
-            nameInput.classList.remove("border-danger");
+// var nameInputs = document.getElementsByClassName("nome");
 
-            // Remove a mensagem de campo obrigatório
-            removerMensagemCampoObrigatorio(nameInput);
-        }
-    });
-}
+// for (var i = 0; i < nameInputs.length; i++) {
+//     nameInputs[i].addEventListener("input", function () {
+//         var nameInput = this;
 
-var phoneNumberInputs = document.getElementsByClassName("celular");
+//         // Remove a classe CSS para remover a borda vermelha
+//         if (nameInput.value.trim() !== "") {
+//             nameInput.classList.remove("border-danger");
 
-for (var i = 0; i < phoneNumberInputs.length; i++) {
-    phoneNumberInputs[i].addEventListener("input", function () {
-        var phoneNumberInput = this;
+//             // Remove a mensagem de campo obrigatório
+//             removerMensagemCampoObrigatorio(nameInput);
+//         }
+//     });
+// }
 
-        // Remove a classe CSS para remover a borda vermelha
-        if (phoneNumberInput.value.trim() !== "") {
-            phoneNumberInput.classList.remove("border-danger");
+// var phoneNumberInputs = document.getElementsByClassName("celular");
 
-            // Remove a mensagem de campo obrigatório
-            removerMensagemCampoObrigatorio(phoneNumberInput);
-        }
-    });
-}
+// for (var i = 0; i < phoneNumberInputs.length; i++) {
+//     phoneNumberInputs[i].addEventListener("input", function () {
+//         var phoneNumberInput = this;
 
-function criarOuAtualizarMensagemCampoObrigatorio(elemento, mensagem) {
-    var mensagemElement = document.getElementById("mensagem-" + elemento.id);
+//         // Remove a classe CSS para remover a borda vermelha
+//         if (phoneNumberInput.value.trim() !== "") {
+//             phoneNumberInput.classList.remove("border-danger");
 
-    if (mensagemElement) {
-        mensagemElement.textContent = mensagem;
-    } else {
-        var span = document.createElement("span");
-        span.classList.add("mensagem-campo-obrigatorio");
-        span.textContent = mensagem;
-        span.id = "mensagem-" + elemento.id;
+//             // Remove a mensagem de campo obrigatório
+//             removerMensagemCampoObrigatorio(phoneNumberInput);
+//         }
+//     });
+// }
 
-        var parentElement = elemento.parentNode;
-        parentElement.appendChild(span);
-    }
-}
+// function criarOuAtualizarMensagemCampoObrigatorio(elemento, mensagem) {
+//     var mensagemElement = document.getElementById("mensagem-" + elemento.id);
 
-function removerMensagemCampoObrigatorio(elemento) {
-    var mensagemElement = document.getElementById("mensagem-" + elemento.id);
+//     if (mensagemElement) {
+//         mensagemElement.textContent = mensagem;
+//     } else {
+//         var span = document.createElement("span");
+//         span.classList.add("mensagem-campo-obrigatorio");
+//         span.textContent = mensagem;
+//         span.id = "mensagem-" + elemento.id;
 
-    if (mensagemElement) {
-        mensagemElement.parentNode.removeChild(mensagemElement);
-    }
-}
+//         var parentElement = elemento.parentNode;
+//         parentElement.appendChild(span);
+//     }
+// }
+
+// function removerMensagemCampoObrigatorio(elemento) {
+//     var mensagemElement = document.getElementById("mensagem-" + elemento.id);
+
+//     if (mensagemElement) {
+//         mensagemElement.parentNode.removeChild(mensagemElement);
+//     }
+// }
