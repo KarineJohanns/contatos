@@ -28,9 +28,9 @@
                 </div>
                 @endif
 
-                @if(session('danger'))
+                @if(session('error'))
                 <div class="alert alert-danger erro">
-                    {{session('danger')}}
+                    {{session('error')}}
                 </div>
                 @endif
                 <form method="post" action="{{route('auth.user')}}" class="form-login">

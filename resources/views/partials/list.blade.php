@@ -14,6 +14,13 @@
             </div>
         @endif
     </div>
+    <div class="col-10">
+        @if(session('registry-user'))
+        <div class="alert alert-success">
+            {{session('registry-user')}}
+        </div>
+        @endif
+    </div>
     <table class="table align-middle mb-0">
         <thead class="head-table">
             <tr>

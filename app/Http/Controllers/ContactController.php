@@ -108,7 +108,6 @@ class ContactController extends Controller
     }
 
     public function deleteContact(Request $request, $id){
-        echo $id;
         $contact = Contact::find($id);
         if (!$contact) {
             return redirect()->route('contact')->with('error', 'Contato não encontrado.');
