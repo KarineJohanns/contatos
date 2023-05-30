@@ -25,7 +25,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="nome">Nome completo *</label>
-              <input value="" type="text" class="nome" id="nome" name="name" placeholder="Nome">
+              <input value="" type="text" class="nome" id="nome" name="name" placeholder="Nome" required>
             </div>
           </div>
           <div class="col-md-6">
@@ -43,7 +43,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="celular">Celular *</label>
-              <input value="" class="celular" type="text" id="celular" name="phone-number" placeholder="(00) 0 0000-0000">
+              <input value="" class="celular" type="text" id="celular" name="phone-number" placeholder="(00) 0 0000-0000" required>
             </div>
           </div>
           <div class="col-md-6">
