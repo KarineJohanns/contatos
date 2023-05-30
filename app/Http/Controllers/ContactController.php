@@ -31,7 +31,7 @@ class ContactController extends Controller
 
     public function updateContact(Request $request, $id){
         if (!Auth::check()) {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error', 'Usuário não autenticado.');
         }
 
         $validator = Validator::make($request->all(), [
@@ -67,12 +67,12 @@ class ContactController extends Controller
         $contact->note = $request->input('note');
 
         $contact->save();
-        return redirect('/contato');
+        return redirect('/contato')->with('success', 'Contato editado com sucesso.');
     }
 
     public function createContact(Request $request){
         if (!Auth::check()) {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error', 'Usuário não autenticado.');
         }
 
         $validator = Validator::make($request->all(), [
@@ -104,6 +104,19 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return redirect('/contato');
+        return redirect('/contato')->with('success', 'Contato criado com sucesso.');
+    }
+
+    public function deleteContact(Request $request, $id){
+        echo $id;
+        $contact = Contact::find($id);
+        if (!$contact) {
+            return redirect()->route('contact')->with('error', 'Contato não encontrado.');
+        }
+
+        $contact->delete();
+
+        return redirect()->route('contact')->with('success', 'Contato deletado com sucesso.');
+
     }
 }
