@@ -1,5 +1,19 @@
 <!-- Lista de contatos -->
 <div class="container-formulario">
+    <div class="col-10">
+        @if(session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+    </div>
+    <div class="col-10">
+        @if(session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
+    </div>
     <table class="table align-middle mb-0">
         <thead class="head-table">
             <tr>
@@ -37,48 +51,53 @@
                     <!-- Modal delete contato -->
                     <div class="modal fade" id="deleteContact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Apagar contato</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <form action="{{ route('delete.contact', ['id' => $contact->id]) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Apagar contato</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Tem certeza que deseja apagar o contato <b>{{$contact->name}}</b>?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Apagar</button>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Tem certeza que deseja apagar o contato?</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Apagar</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </td>
             </tr>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes do contato {{ $contact->name }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><strong>Nome completo: </strong> {{ $contact->name }}</p>
+                                <p><strong>CPF: </strong> {{ $contact->cpf }}</p>
+                                <p><strong>Telefone: </strong> {{ $contact->phone }}</p>
+                                <p><strong>Celular: </strong> {{ $contact['phone-number'] }}</p>
+                                <p><strong>E-mail: </strong> {{ $contact->email }}</p>
+                                <p><strong>CEP: </strong> {{ $contact->cep }}</p>
+                                <p><strong>Rua: </strong> {{ $contact->street }}</p>
+                                <p><strong>Numero: </strong> {{ $contact->number }}</p>
+                                <p><strong>Estado: </strong> {{ $contact->state }}</p>
+                                <p><strong>Cidade: </strong> {{ $contact->city }}</p>
+                                <p><strong>Observações: </strong> {{ $contact->note }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endforeach
         </tbody>
     </table>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Detalhes do contato {{ $contact->name }}</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Nome completo: </strong> {{ $contact->name }}</p>
-                    <p><strong>CPF: </strong> {{ $contact->cpf }}</p>
-                    <p><strong>Telefone: </strong> {{ $contact->phone }}</p>
-                    <p><strong>Celular: </strong> </p>
-                    <p><strong>E-mail: </strong> {{ $contact->email }}</p>
-                    <p><strong>CEP: </strong> {{ $contact->cep }}</p>
-                    <p><strong>Rua: </strong> {{ $contact->street }}</p>
-                    <p><strong>Numero: </strong> {{ $contact->number }}</p>
-                    <p><strong>Estado: </strong> {{ $contact->state }}</p>
-                    <p><strong>Cidade: </strong> {{ $contact->city }}</p>
-                    <p><strong>Observações: </strong> {{ $contact->note }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
